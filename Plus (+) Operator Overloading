@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Add
+{
+public:
+    int a;
+
+    void getData()
+    {
+        cin >> a;
+    }
+
+    Add operator+(Add x)
+    {
+        Add t;
+        t.a = a + x.a;
+        return t;
+    }
+};
+
+int main()
+{
+    Add n1, n2, n3;
+
+    cout << "Enter first number: ";
+    n1.getData();
+
+    cout << "Enter second number: ";
+    n2.getData();
+
+    n3 = n1 + n2;
+
+    cout << "Sum = " << n3.a;
+
+    return 0;
+}
