@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Number
+{
+public:
+    int n;
+
+    void getData()
+    {
+        cin >> n;
+    }
+
+    void operator++()
+    {
+        ++n;
+    }
+};
+
+int main()
+{
+    Number x;
+
+    cout << "Enter number: ";
+    x.getData();
+
+    ++x;
+
+    cout << "After Increment = " << x.n;
+
+    return 0;
+}
