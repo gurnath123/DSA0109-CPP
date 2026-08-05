@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+class Array
+{
+public:
+    int a[5] = {10, 20, 30, 40, 50};
+
+    int operator[](int i)
+    {
+        return a[i];
+    }
+};
+
+int main()
+{
+    Array x;
+
+    cout << x[2];
+
+    return 0;
+}
