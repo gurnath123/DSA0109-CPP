@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Number
+{
+public:
+    int n;
+
+    void getData()
+    {
+        cin >> n;
+    }
+
+    bool operator==(Number x)
+    {
+        return n == x.n;
+    }
+};
+
+int main()
+{
+    Number a, b;
+
+    cout << "Enter first number: ";
+    a.getData();
+
+    cout << "Enter second number: ";
+    b.getData();
+
+    if(a == b)
+        cout << "Equal";
+    else
+        cout << "Not Equal";
+
+    return 0;
+}
